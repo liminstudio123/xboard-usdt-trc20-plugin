@@ -1,0 +1,52 @@
+{
+  "name": "USDT TRC20 Payment",
+  "description": "USDT TRC20 支付插件 - 集成 auto-receive-crypto-pay",
+  "version": "1.0.0",
+  "author": "Your Name",
+  "url": "https://github.com/yourusername",
+  "email": "your@email.com",
+  "license": "MIT",
+  "requires": ">=2.0.0",
+  "type": "payment",
+  "config": {
+    "enabled": {
+      "label": "启用此支付方式",
+      "type": "checkbox",
+      "default": true
+    },
+    "display_name": {
+      "label": "显示名称",
+      "type": "string",
+      "default": "USDT (TRC20)"
+    },
+    "icon": {
+      "label": "图标",
+      "type": "string",
+      "default": "💎"
+    },
+    "pay_server_url": {
+      "label": "auto-receive-crypto-pay 地址",
+      "type": "string",
+      "required": true
+    },
+    "pay_server_auth": {
+      "label": "Webhook 密钥",
+      "type": "string",
+      "required": true
+    },
+    "network": {
+      "label": "区块链网络",
+      "type": "select",
+      "default": "TRON_MAINNET",
+      "options": {
+        "TRON_MAINNET": "Tron 主网",
+        "TRON_TESTNET": "Tron 测试网"
+      }
+    },
+    "confirm_blocks": {
+      "label": "确认块数",
+      "type": "string",
+      "default": "25"
+    }
+  }
+}
